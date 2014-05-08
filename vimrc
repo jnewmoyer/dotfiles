@@ -131,7 +131,7 @@ set t_ti= t_te= " Prevent Vim from clobbering the scrollback buffer. See
 set tabstop=4
 set tags=~/.jstags,~/.tags,./tags " Look for tags in this file
 set title "Show a window title
-set textwidth=120
+set textwidth=240
 set undolevels=20 " Keep 20 undo levels
 " set visualbell "Make the screen flash on bell
 set wildignore=*.swp,*.bak,*.pyc " Set wildignore to hid swp, bak and pyc files

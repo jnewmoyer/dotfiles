@@ -38,3 +38,4 @@ alias sr="screen -R -d"
 alias ssh_tunnel="ssh -C2qTnN -D 8080 xeed@xeed.me"
 alias tmux="tmux -2 attach || tmux -2"
 alias vi="vim"
+alias gitpp='git pull && git push'

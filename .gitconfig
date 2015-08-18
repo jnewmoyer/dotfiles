@@ -1,0 +1,15 @@
+[user]
+	name = Bryce Fisher
+	email = bfisher@novetta.com
+
+[core]
+	editor = vim
+
+[alias]
+	st = status
+
+[merge]
+	tool = vimdiff
+
+[push]
+	default = current

@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
+Plugin 'veegee/cql-vim'
 
 call vundle#end()
 
@@ -21,8 +22,8 @@ set numberwidth=5
 set cursorline
 set autoindent
 set backup
-set backupdir=~/.vim/tmp/backup//
-set directory=~/.vim/tmp/swp//
+set backupdir=~/.vim/tmp/backup/
+set directory=~/.vim/tmp/swp/
 set encoding=utf8
 set hlsearch
 set ignorecase
@@ -36,6 +37,7 @@ set smartindent
 set title
 set undolevels=20
 set t_ti= t_te=
+set textwidth=120
 
 "Disable arrow keys
 map <Left> <Nop>

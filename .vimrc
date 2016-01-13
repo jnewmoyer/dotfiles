@@ -8,6 +8,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
 Plugin 'veegee/cql-vim'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 call vundle#end()
 

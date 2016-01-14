@@ -4,11 +4,13 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
 Plugin 'veegee/cql-vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'maksimr/vim-jsbeautify'
 
 call vundle#end()
 
@@ -56,8 +58,10 @@ nmap <silent> <leader><space> :nohlsearch<cr>
 "remove quickfix window
 let g:go_fmt_fail_silently = 1
 
-"let g:go_highlight_functions = 1
-"let g:go_highlight_methods = 1
-"let g:go_highlight_structs = 1
-"let g:go_highlight_operators = 1
-"let g:go_highlight_build_constraints = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_metalinter_autosave = 1
+let g:go_fmt_command = "goimports"

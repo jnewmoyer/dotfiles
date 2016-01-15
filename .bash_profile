@@ -10,7 +10,7 @@ fi
 
 GOPATH=$HOME/go
 GOROOT=/usr/local/go
-GOBIN=/usr/local/go/bin
+GOBIN=$GOPATH/bin
 
 JAVA_HOME=/usr/java/jre1.8.0_45/
 
@@ -18,6 +18,8 @@ JAVA_HOME=/usr/java/jre1.8.0_45/
 KLE_CLUSTER=localhost
 CERBEROS=$GOPATH/src/github.com/Novetta/KLE/kleserver
 
-PATH=$PATH:$HOME/bin:${JAVA_HOME}/bin
+PATH=$PATH:$HOME/bin:${JAVA_HOME}/bin:$HOME/nsq-0.3.6.linux-amd64.go1.5.1/bin:$HOME/maveninstall/apache-maven-3.3.9/bin:$GOPATH/bin:/$HOME/bin/Sencha/Cmd/6.0.2.14/..
 
-export PATH GOPATH GOROOT GOBIN JAVA_HOME CERBEROS KLE_CLUSTER
+TERM=xterm-256color
+
+export PATH GOPATH GOROOT GOBIN JAVA_HOME CERBEROS KLE_CLUSTER TERM

@@ -21,6 +21,7 @@ filetype plugin indent on
 
 "Standard vim setup
 set showcmd
+set autowrite
 set number
 set numberwidth=5
 set cursorline
@@ -42,6 +43,11 @@ set title
 set undolevels=20
 set t_ti= t_te=
 set textwidth=120
+set t_Co=256 "If in terminal use 256 colors
+
+syntax case match
+syntax sync minlines=256
+syntax on
 
 "Disable arrow keys
 map <Left> <Nop>

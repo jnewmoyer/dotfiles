@@ -57,6 +57,7 @@ map <Down> <Nop>
 
 "Color
 set background=dark
+colorscheme delek
 
 "Remove highlighting from searches on demand
 nmap <silent> <leader><space> :nohlsearch<cr>

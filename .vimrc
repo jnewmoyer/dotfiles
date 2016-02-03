@@ -63,7 +63,7 @@ map <Down> <Nop>
 "let g:molokei_original = 1
 let g:rehash256 = 1
 set background=dark
-color delek
+colorscheme delek
 
 "Remove highlighting from searches on demand
 nmap <silent> <leader><space> :nohlsearch<cr>

@@ -44,7 +44,7 @@ set undolevels=20
 set t_ti= t_te=
 set textwidth=120
 set t_Co=256 "If in terminal use 256 colors
-set scrolloff=3 "Keep 3 lines below and above the cursor
+set scrolloff=9999 "Keep 3 lines below and above the cursor
 
 "Prevent background bleed over
 set t_ut=

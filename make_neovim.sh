@@ -15,3 +15,5 @@ cd $HOME/.config
 ln -s $HOME/.vim nvim
 cd nvim
 ln -s $HOME/.vimrc init.vim
+
+source $HOME/.bashrc

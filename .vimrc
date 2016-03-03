@@ -6,7 +6,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
+Plugin 'benekastah/neomake'
 Plugin 'veegee/cql-vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'jelera/vim-javascript-syntax'

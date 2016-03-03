@@ -9,6 +9,9 @@ fi
 alias ls='ls -lh --color=auto'
 alias gitpp='git pull && git push'
 alias htop='TERM=screen htop'
+alias bzip2='pbzip2'
+alias bunzip2='pbunzip2'
+which nvim &> /dev/null && alias vim='nvim'
 
 function _git_prompt() {
     local git_status="`git status -unormal 2>&1`"

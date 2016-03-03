@@ -54,6 +54,15 @@ syntax case match
 syntax sync minlines=256
 syntax on
 
+if has('autocmd')
+	autocmd BufNewFile,BufRead *.js setlocal et ts=4 sw=4 sts=4
+
+	"Beautify
+	autocmd FileType havascript nnoremap <leader>f :call JsBeautify()<cr>
+	"make
+	autocmd! BufWritePost,BufEnter * Neomake
+endif
+
 "Disable arrow keys
 map <Left> <Nop>
 map <Right> <Nop>
@@ -68,6 +77,18 @@ colorscheme delek
 
 "Remove highlighting from searches on demand
 nmap <silent> <leader><space> :nohlsearch<cr>
+
+
+" Neomake
+let g:neomake_javascript_enabled_makers = ['eslint', 'jshint']
+let g:neomake_error_sign = {
+    \ 'text': 'E>',
+    \ 'texthl': 'ErrorMsg',
+    \ }
+let g:neomake_warning_sign = {
+    \ 'text': 'W>',
+    \ 'texthl': 'WarningMsg',
+    \ }
 
 "remove quickfix window
 let g:go_fmt_fail_silently = 1

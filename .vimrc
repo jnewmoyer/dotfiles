@@ -80,6 +80,7 @@ nmap <silent> <leader><space> :nohlsearch<cr>
 
 
 " Neomake
+let g:neomake_go_enabled_makers = ['go', 'golint', 'govet']
 let g:neomake_javascript_enabled_makers = ['eslint', 'jshint']
 let g:neomake_error_sign = {
     \ 'text': 'E>',

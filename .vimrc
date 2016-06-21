@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
 "Plugin 'scrooloose/syntastic'
@@ -26,6 +27,8 @@ set autowrite
 set number
 set numberwidth=5
 set cursorline
+set complete=.,w,b,u,t "better completion
+set completeopt=longest,menuone,preview "better completion options
 set autoindent
 set backup
 set backupdir=~/.vim/tmp/backup/
@@ -58,7 +61,7 @@ if has('autocmd')
 	autocmd BufNewFile,BufRead *.js setlocal et ts=4 sw=4 sts=4
 
 	"Beautify
-	autocmd FileType havascript nnoremap <leader>f :call JsBeautify()<cr>
+	autocmd FileType javascript nnoremap <leader>f :call JsBeautify()<cr>
 	"make
 	autocmd! BufWritePost,BufEnter * Neomake
 endif

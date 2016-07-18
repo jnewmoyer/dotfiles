@@ -1,0 +1,11 @@
+#! /bin/bash
+
+h=${GOPATH}/github.com/Novetta
+cd ${h}
+for dir in $(/bin/ls -d ./*); do 
+	echo "$dir" 
+	cd "${h}/$dir" 
+	git pull 
+	subupdate 
+	prune-branches 
+done

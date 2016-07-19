@@ -1,11 +1,13 @@
 #! /bin/bash
 
-h=${GOPATH}/github.com/Novetta
+h=${GOPATH}/src/github.com/Novetta
 cd ${h}
 for dir in $(/bin/ls -d ./*); do 
-	echo "$dir" 
-	cd "${h}/$dir" 
-	git pull 
-	subupdate 
-	prune-branches 
+	if [ -d ".git" ]; then
+		echo "$dir" 
+		cd "${h}/$dir" 
+		git pull 
+		subupdate 
+		prune-branches 
+	fi
 done

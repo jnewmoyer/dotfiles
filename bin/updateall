@@ -1,13 +1,16 @@
 #! /bin/bash
 
+set -x
 h=${GOPATH}/src/github.com/Novetta
+echo "$h"
 cd ${h}
-for dir in $(/bin/ls -d ./*); do 
+for d in $(/bin/ls -d ./*); do 
+	echo "$d" 
+	cd "${h}/$d" 
 	if [ -d ".git" ]; then
-		echo "$dir" 
-		cd "${h}/$dir" 
 		git pull 
 		subupdate 
 		prune-branches 
 	fi
+	cd ${h}
 done

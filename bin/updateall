@@ -1,6 +1,5 @@
 #! /bin/bash
 
-set -x
 h=${GOPATH}/src/github.com/Novetta
 echo "$h"
 cd ${h}

@@ -4,9 +4,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
+Plugin 'pangloss/vim-javascript' "Required for vim-jsx support
+Plugin 'mxw/vim-jsx' "react support
 "Plugin 'scrooloose/syntastic'
 Plugin 'benekastah/neomake'
 Plugin 'veegee/cql-vim'
@@ -17,6 +19,7 @@ Plugin 'maksimr/vim-jsbeautify'
 call vundle#end()
 
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>t <Plug>(go-test)
 au BufRead,BufNewFile *.spect setfiletype spec
 
 filetype plugin indent on
@@ -62,8 +65,11 @@ if has('autocmd')
 
 	"Beautify
 	autocmd FileType javascript nnoremap <leader>f :call JsBeautify()<cr>
+	autocmd FileType javascript nnoremap <leader>t :call JsxBeautify()<cr>
 	"make
 	autocmd! BufWritePost,BufEnter * Neomake
+	"GoRun
+	autocmd FileType go nnoremap <leader>r :call GoRun()<cr>
 endif
 
 "Disable arrow keys
@@ -81,10 +87,12 @@ colorscheme delek
 "Remove highlighting from searches on demand
 nmap <silent> <leader><space> :nohlsearch<cr>
 
+" React js files
+let g:jsx_ext_required = 0 "Allow JSX in normal JS files
 
 " Neomake
 let g:neomake_go_enabled_makers = ['go', 'golint', 'govet']
-let g:neomake_javascript_enabled_makers = ['eslint', 'jshint']
+let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_error_sign = {
     \ 'text': 'E>',
     \ 'texthl': 'ErrorMsg',

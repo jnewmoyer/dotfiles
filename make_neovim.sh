@@ -7,8 +7,8 @@ sudo yum -y install libtool autoconf automake cmake gcc gcc-c++ make pkgconfig u
 cd $HOME
 git clone https://github.com/neovim/neovim.git
 cd neovim
-make CMAKE_BUILD_TYPE=Release -j 4
-sudo make install -j 4
+make -j 4 CMAKE_BUILD_TYPE=Release
+sudo make -j 4 install
 
 mkdir -p $HOME/.config
 cd $HOME/.config

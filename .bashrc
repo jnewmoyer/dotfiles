@@ -6,7 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-alias ls='ls -lh --color=auto'
+alias ls='ls -lhrt --color=auto'
 alias gitpp='git pull && git push'
 alias htop='TERM=screen htop'
 alias bzip2='pbzip2'

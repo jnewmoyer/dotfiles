@@ -14,7 +14,7 @@ encoding UTF-8
 hardcopydir "$HOME/.screen/hardcopy"
 hardstatus alwayslastline
 hardstatus on
-hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
 maptimeout 5 # Wait no longer than 5ms between keypresses
 nonblock on
 #screen -t vim 1 vim .

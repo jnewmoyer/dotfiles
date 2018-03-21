@@ -17,7 +17,7 @@ alias ll='ls -lhrt'
 export GOROOT=/usr/local/go
 export GOPATH=~/gopath
 
-export PATH=/usr/local/go/bin:$HOME/bin:$PATH
+export PATH=$GOROOT/bin:$GOPATH/bin:$HOME/bin:$PATH
 
 source /opt/geoserver/conf/geoserver.env
 

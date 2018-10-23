@@ -15,8 +15,8 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 7891, host: 7891   # wmsproxy
   config.vm.network "forwarded_port", guest: 54321, host: 54321 # postgres
 
-  config.vm.synced_folder ENV['GOPATH'], "~/gopath"
+  config.vm.synced_folder ENV['GOPATH'], "/vagrant/gopath"
 
-  config.vm.provision "shell", path: "bin/provision"
+  config.vm.provision "shell", path: "bin/provision.sh"
 
 end

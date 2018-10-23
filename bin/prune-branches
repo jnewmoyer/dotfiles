@@ -1,4 +1,0 @@
-#!/bin/bash
-
-git fetch --prune
-git branch --merged | grep -v -E "\*|master|dev" | xargs -n 1 git branch -d

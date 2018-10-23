@@ -18,12 +18,18 @@ if [ $? -ne 0 ]; then
   golang=go$go_ver.linux-amd64.tar.gz
   echo "installing GO $go_ver"
   if [ ! -f $golang ]; then
-      wget -q --no-check-certificate https://storage.googleapis.com/golang/$golang
+    wget -q --no-check-certificate https://storage.googleapis.com/golang/$golang
   fi
-  tar -zxf $golang -C ~/
-
-  echo 'export GOROOT=~/go' >> ~/.bashrc
-  echo 'export GOPATH=~/gopath' >> ~/.bashrc
-  echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.bashrc
-  source ~/.bashrc
+  tar -zxf $golang -C /usr/local
+  rm -f $golang 
 fi
+
+# add personal dotfiles
+git clone https://github.com/jnewmoyer/dotfiles
+cp -r ./dotfiles/.* ./
+rm -rf .git
+
+source .bashrc
+
+
+

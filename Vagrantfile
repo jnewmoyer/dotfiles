@@ -10,12 +10,15 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = "bento/centos-7.5"
 
+  config.vm.network "public_network"
+  
   config.vm.network "forwarded_port", guest: 7880, host: 7880  # geoserver
   config.vm.network "forwarded_port", guest: 7890, host: 7890   # gambit
   config.vm.network "forwarded_port", guest: 7891, host: 7891   # wmsproxy
-  config.vm.network "forwarded_port", guest: 54321, host: 54321 # postgres
+  config.vm.network "forwarded_port", guest: 6777, host: 6777   # redicop
+  config.vm.network "forwarded_port", guest: 54323, host: 54323 # postgres
 
-  config.vm.synced_folder ENV['GOPATH'], "/vagrant/gopath"
+  config.vm.synced_folder ENV['GOPATH'], "/home/vagrant/gopath"
 
   config.vm.provision "shell", path: "bin/provision.sh"
 

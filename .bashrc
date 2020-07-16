@@ -10,6 +10,8 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias ll='ls -lhart'
+alias sc='systemctl'
+alias jc='journalctl'
 
 # User specific environment and startup programs
 
